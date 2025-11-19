@@ -9,12 +9,12 @@ final class GameBoard {
     
     // MARK: - Properties
     private(set) var cells: [Player.PlayerType?]
-    private(set) var moveHistory: [(row: Int, col: Int)]
+    internal var moveHistory: [(row: Int, col: Int)]
     private(set) var boardSize: Int
     private(set) var winningLine: [(Int, Int)]? = nil
     private let maxActiveMovesOffset = 3
     /// Precomputed list of all winning lines (rows, columns, diagonals)
-    private lazy var allLines: [[(Int, Int)]] = generateAllLines()
+    private(set) lazy var allLines: [[(Int, Int)]] = generateAllLines()
     
     // MARK: - Init
     init(size: Int) {
