@@ -6,19 +6,19 @@
 //
 
 import UIKit
+import AppResources
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         if UserDefaults.standard.object(forKey: "soundEnabled") == nil {
-            SoundManager.shared.preload("boardTapSound.wav")
-            SoundManager.shared.preload("buttonTapSound.wav")
-            SoundManager.shared.preload("segmentedControlSound.wav")
-            SoundManager.shared.preload("winSound.wav")
+            SoundManager.shared.preload("boardTapSound")
+            SoundManager.shared.preload("buttonTapSound")
+            SoundManager.shared.preload("segmentedControlSound")
+            SoundManager.shared.preload("winSound")
+            SoundManager.shared.preload("startGameSound")
         }
 
         return true
@@ -40,4 +40,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
 
