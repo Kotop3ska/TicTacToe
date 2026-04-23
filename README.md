@@ -28,6 +28,9 @@ This makes the gameplay dynamic and changes the game strategy.
 
 ## Screenshots
 
-<img src="Screenshots/MainMenu.png" width="250"> <img src="Screenshots/SettingsScreen.png" width="250"> <img src="Screenshots/VSPlayer.png" width="250"> 
-<img src="Screenshots/VSBot.png" width="250"> <img src="Screenshots/GameBoard.png" width="250"> <img src="Screenshots/WinScreen.png" width="250">
+<div align="center">
+  <img src="Screenshots/screens1.png" width="650">
+  <img src="Screenshots/screens2.png" width="650"> 
+</div>
+
 
