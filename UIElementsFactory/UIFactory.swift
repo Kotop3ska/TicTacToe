@@ -8,39 +8,39 @@
 import UIKit
 
 /// Provides a single interface for accessing all UI component builders.
-public class UIBuilder {
+public class UIFactory {
     
     /// Returns a single instance of the facade builder.
-    public static let shared = UIBuilder()
+    public static let shared = UIFactory()
     
     /// Prevents external initialization.
     private init() {}
     
     /// Returns a builder for creating buttons.
-    public var buttonBuilder: any ButtonBuilding { ButtonBuilder.shared }
+    public var buttonBuilder: any ButtonCreating { ButtonFactory.shared }
     
     /// Returns a builder for creating text labels.
-    public var labelBuilder: any LableBuilding { LabelBuilder.shared }
+    public var labelBuilder: any LableCreating { LabelFactory.shared }
     
     /// Returns a builder for creating text fields.
-    public var textFieldBuilder: any TextFieldBuilding { TextFieldBuilder.shared }
+    public var textFieldBuilder: any TextFieldCreating { TextFieldFactory.shared }
     
     /// Returns a builder for creating segmented controls.
-    public var segmentedControlBuilder: any SegmentedControlBuilding { SegmentedControlBuilder.shared }
+    public var segmentedControlBuilder: any SegmentedControlCreating { SegmentedControlFactory.shared }
     
     /// Returns the builder for creating a scroll view.
-    public var scrollViewBuilder: any ScrollViewBuilding { ScrollViewBuilder.shared }
+    public var scrollViewBuilder: any ScrollViewCreating { ScrollViewFactory.shared }
     
     /// Returns a builder for creating images.
-    public var imageViewBuilder: any ImageViewBuilding { ImageViewBuilder.shared }
+    public var imageViewBuilder: any ImageViewCreating { ImageViewFactory.shared }
     
     /// Returns a builder for creating switches.
-    public var switchBuilder: any SwitchBuilding { SwitchBuilder.shared }
+    public var switchBuilder: any SwitchCreating { SwitchFactory.shared }
     
     /// Returns a builder for creating pickers.
-    public var pickerBuilder: any PickerViewBuilding { PickerViewBuilder.shared }
+    public var pickerBuilder: any PickerViewCreating { PickerViewFactory.shared }
     
     /// Returns a builder for creating stacks.
-    public var stackBuilder: any StackViewBuilding { StackViewBuilder.shared }
+    public var stackBuilder: any StackViewCreating { StackViewFactory.shared }
 }
 

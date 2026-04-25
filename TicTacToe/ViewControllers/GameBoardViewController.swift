@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import UIElementsBuilders
+import UIElementsFactory
 import AppResources
 import GameBoardViews
 import GameModels
@@ -31,8 +31,8 @@ final class GameBoardViewController: UIViewController {
                                                    color: .black,
                                                    fontSize: 40)
     
-    /// Provides access to UI component builders.
-    private let elementsBuilder = UIBuilder.shared
+    /// Provides access to UI component factory.
+    private let elementsFactory = UIFactory.shared
 
     // MARK: - Init
     
@@ -222,6 +222,6 @@ final class GameBoardViewController: UIViewController {
     ///   - fontSize: Font size
     /// - Returns: Configured UILabel instance
     private func createLabel(text: String, color: UIColor, fontSize: CGFloat) -> UILabel {
-        return self.elementsBuilder.labelBuilder.createLabel(text: text, color: color, fontSize: fontSize)
+        return self.elementsFactory.labelBuilder.createLabel(text: text, color: color, fontSize: fontSize)
     }
 }

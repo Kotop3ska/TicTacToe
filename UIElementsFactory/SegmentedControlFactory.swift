@@ -8,10 +8,10 @@
 import UIKit
 
 /// Creates UISegmentedControl.
-class SegmentedControlBuilder: SegmentedControlBuilding {
+class SegmentedControlFactory: SegmentedControlCreating {
     
     /// Singleton reference.
-    static let shared = SegmentedControlBuilder()
+    static let shared = SegmentedControlFactory()
     
     /// Prevents external initializing.
     private init() {}

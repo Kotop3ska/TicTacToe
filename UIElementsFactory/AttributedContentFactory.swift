@@ -8,10 +8,10 @@
 import UIKit
 
 /// Creates content for buttons.
-class AttributedContentBuilder {
+class AttributedContentFactory {
     
     /// Singleton reference.
-    static let shared = AttributedContentBuilder()
+    static let shared = AttributedContentFactory()
     
     /// Prevents external initialization.
     private init() {}

@@ -10,7 +10,7 @@ import UIKit
 // MARK: - Button
 
 /// Defines an interface for creating buttons and attributed content.
-public protocol ButtonBuilding {
+public protocol ButtonCreating {
     
     /// Creates a button with predefined attributed content.
     /// - Parameters:
@@ -57,7 +57,7 @@ public protocol ButtonBuilding {
 // MARK: - ImageView
 
 /// Defines an interface for creating UIImageView.
-public protocol ImageViewBuilding {
+public protocol ImageViewCreating {
     
     /// Creates a UIImageView with an image by name.
     /// - Parameter name: Image name in the project resources
@@ -68,7 +68,7 @@ public protocol ImageViewBuilding {
 // MARK: - Lable
 
 /// Defines an interface for creating UILabel.
-public protocol LableBuilding {
+public protocol LableCreating {
     
     /// Creates a UILabel with the specified text and style.
     /// - Parameters:
@@ -82,7 +82,7 @@ public protocol LableBuilding {
 // MARK: - PickerView
 
 /// Defines an interface for creating UIPickerView.
-public protocol PickerViewBuilding {
+public protocol PickerViewCreating {
     
     /// Creates a basic UIPickerView.
     /// - Returns: The configured UIPickerView
@@ -92,7 +92,7 @@ public protocol PickerViewBuilding {
 // MARK: - ScrollView
 
 /// Defines an interface for creating UIScrollView.
-public protocol ScrollViewBuilding {
+public protocol ScrollViewCreating {
     
     /// Creates a basic UIScrollView.
     /// - Returns: The configured UIScrollView
@@ -102,7 +102,7 @@ public protocol ScrollViewBuilding {
 // MARK: - SegmentedControl
 
 /// Defines an interface for creating UISegmentedControl.
-public protocol SegmentedControlBuilding {
+public protocol SegmentedControlCreating {
     
     /// Creates a UISegmentedControl with the specified parameters.
     /// - Parameters:
@@ -124,7 +124,7 @@ public protocol SegmentedControlBuilding {
 // MARK: - StackView
 
 /// Defines an interface for creating UIStackView.
-public protocol StackViewBuilding {
+public protocol StackViewCreating {
     
     /// Creates a vertical UIStackView.
     /// - Parameters:
@@ -151,7 +151,7 @@ public protocol StackViewBuilding {
 // MARK: - Switch
 
 /// Defines an interface for creating UISwitch.
-public protocol SwitchBuilding {
+public protocol SwitchCreating {
     
     /// Creates a basic UISwitch.
     /// - Returns: The configured UISwitch
@@ -161,7 +161,7 @@ public protocol SwitchBuilding {
 // MARK: - TextField
 
 /// Defines an interface for creating UITextField.
-public protocol TextFieldBuilding {
+public protocol TextFieldCreating {
     
     // Creates a UITextField with the specified design parameters.
     /// - Parameters:

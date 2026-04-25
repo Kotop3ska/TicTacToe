@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import UIElementsBuilders
+import UIElementsFactory
 import AppResources
 
 /// Presents the main menu for selecting game mode (1-player vs bot or 2-player local).
@@ -23,8 +23,8 @@ final class ModelSelectionViewController: UIViewController {
     /// The main logo image.
     private lazy var iconImageView = createImageView(name: "MainLogo")
     
-    /// Provides access to UI component builders.
-    private let elementsBuilder = UIBuilder.shared
+    /// Provides access to UI component factory.
+    private let elementsFactory = UIFactory.shared
     
     // MARK: - Life cycle
     
@@ -53,7 +53,7 @@ final class ModelSelectionViewController: UIViewController {
     /// Builds a vertical stack view containing logo and mode selection buttons.
     /// - Returns: Configured UIStackView with centered alignment
     private func createStackView() -> UIStackView {
-        let stackView = self.elementsBuilder.stackBuilder.createVerticalStackView(with: 30,
+        let stackView = self.elementsFactory.stackBuilder.createVerticalStackView(with: 30,
                                                                                   distribution: .fill,
                                                                                   alignment: .center)
         stackView.addArrangedSubview(self.iconImageView)
@@ -151,7 +151,7 @@ final class ModelSelectionViewController: UIViewController {
     private func createButton(leftIcon: String, rightIcon: String, text: String = "VS") -> UIButton {
         
         let attachment = makeAttachment(leftIcon: leftIcon, rightIcon: rightIcon)
-        return self.elementsBuilder.buttonBuilder.createButton(withAttacment: attachment,
+        return self.elementsFactory.buttonBuilder.createButton(withAttacment: attachment,
                                                                      color: .playerOColor,
                                                                      cornerRadius: 15,
                                                                      fontSize: 25)
@@ -167,13 +167,13 @@ final class ModelSelectionViewController: UIViewController {
         let attachment = NSMutableAttributedString()
         
         let leftIcon = UIImage(systemName: leftIcon)
-        attachment.append(self.elementsBuilder.buttonBuilder.makeAttachment(image: leftIcon,
+        attachment.append(self.elementsFactory.buttonBuilder.makeAttachment(image: leftIcon,
                                                                             scale: 1.7,
                                                                             offset: -4,
                                                                             tintColor: .white))
-        attachment.append(self.elementsBuilder.buttonBuilder.makeAttachment(title: "    \(text)    "))
+        attachment.append(self.elementsFactory.buttonBuilder.makeAttachment(title: "    \(text)    "))
         let rightIcon = UIImage(systemName: rightIcon)
-        attachment.append(self.elementsBuilder.buttonBuilder.makeAttachment(image: rightIcon,
+        attachment.append(self.elementsFactory.buttonBuilder.makeAttachment(image: rightIcon,
                                                                             scale: 1.7,
                                                                             offset: -4,
                                                                             tintColor: .white))
@@ -185,7 +185,7 @@ final class ModelSelectionViewController: UIViewController {
     /// - Parameter name: Image name in asset catalog
     /// - Returns: Configured UIImageView with aspect-fit content mode
     private func createImageView(name: String) -> UIImageView {
-        return self.elementsBuilder.imageViewBuilder.createImageView(name: name)
+        return self.elementsFactory.imageViewBuilder.createImageView(name: name)
     }
     
 }

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import UIElementsBuilders
+import UIElementsFactory
 import AppResources
 
 /// Presents a modal settings screen for configuring sound and language preferences.
@@ -32,8 +32,8 @@ final class SettingsViewController: UIViewController, UIGestureRecognizerDelegat
     /// Maps language display names to locale codes.
     private let languages = ["English": "en", "Русский": "ru"]
     
-    /// Provides access to UI component builders.
-    private let elementsBuilder = UIBuilder.shared
+    /// Provides access to UI component factory.
+    private let elementsFactory = UIFactory.shared
 
     // MARK: - Life cycle
     
@@ -108,7 +108,7 @@ final class SettingsViewController: UIViewController, UIGestureRecognizerDelegat
     /// Creates a horizontal stack with sound label and switch.
     /// - Returns: Configured UIStackView
     private func createSoundStack() -> UIStackView {
-        let stack = self.elementsBuilder.stackBuilder.createHorizontalStackView(with: 20,
+        let stack = self.elementsFactory.stackBuilder.createHorizontalStackView(with: 20,
                                                                                 distribution: .equalSpacing,
                                                                                 alignment: .center)
         stack.addArrangedSubview(self.soundLabel)
@@ -119,7 +119,7 @@ final class SettingsViewController: UIViewController, UIGestureRecognizerDelegat
     /// Creates a horizontal stack with language label and picker.
     /// - Returns: Configured UIStackView with fixed picker width
     private func createLanguageStack() -> UIStackView {
-        let stack = self.elementsBuilder.stackBuilder.createHorizontalStackView(with: 20,
+        let stack = self.elementsFactory.stackBuilder.createHorizontalStackView(with: 20,
                                                                                 distribution: .equalSpacing,
                                                                                 alignment: .center)
         stack.addArrangedSubview(self.languageLabel)
@@ -134,7 +134,7 @@ final class SettingsViewController: UIViewController, UIGestureRecognizerDelegat
     ///   - languageStack: Horizontal stack for language picker
     /// - Returns: Configured vertical UIStackView
     private func createVerticalStack(soundStack: UIStackView, languageStack: UIStackView) -> UIStackView {
-        let stack = self.elementsBuilder.stackBuilder.createVerticalStackView(with: 20, distribution: .fillEqually, alignment: .fill)
+        let stack = self.elementsFactory.stackBuilder.createVerticalStackView(with: 20, distribution: .fillEqually, alignment: .fill)
         stack.addArrangedSubview(soundStack)
         stack.addArrangedSubview(languageStack)
 
@@ -202,13 +202,13 @@ final class SettingsViewController: UIViewController, UIGestureRecognizerDelegat
     ///   - fontSize: Font size
     /// - Returns: Configured UILabel instance
     private func createLabel(text: String, color: UIColor, fontSize: CGFloat) -> UILabel {
-        return self.elementsBuilder.labelBuilder.createLabel(text: text, color: color, fontSize: fontSize)
+        return self.elementsFactory.labelBuilder.createLabel(text: text, color: color, fontSize: fontSize)
     }
     
     /// Creates a UISwitch synced with current SoundManager setting.
     /// - Returns: Configured UISwitch instance
     private func createSoundSwitch() -> UISwitch {
-        let sw = self.elementsBuilder.switchBuilder.createSwitch()
+        let sw = self.elementsFactory.switchBuilder.createSwitch()
         sw.isOn = SoundManager.shared.soundEnabled
         return sw
     }
@@ -216,7 +216,7 @@ final class SettingsViewController: UIViewController, UIGestureRecognizerDelegat
     /// Creates a basic UIPickerView via the builder.
     /// - Returns: Configured UIPickerView instance
     private func createLanguagePicker() -> UIPickerView {
-        return self.elementsBuilder.pickerBuilder.createPicker()
+        return self.elementsFactory.pickerBuilder.createPicker()
     }
 }
 

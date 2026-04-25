@@ -8,10 +8,10 @@
 import UIKit
 
 /// Creates and configures a UITextField
-class TextFieldBuilder: TextFieldBuilding {
+class TextFieldFactory: TextFieldCreating {
     
     /// Singleton reference.
-    static let shared = TextFieldBuilder()
+    static let shared = TextFieldFactory()
     
     /// Prevents external initializing.
     private init() {}

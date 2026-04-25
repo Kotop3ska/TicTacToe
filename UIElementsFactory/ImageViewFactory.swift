@@ -8,16 +8,16 @@
 import UIKit
 
 /// Creates and configures a UIImageView with the given image.
-class ImageViewBuilder: ImageViewBuilding {
+class ImageViewFactory: ImageViewCreating {
     
     /// Singleton reference.
-    static let shared = ImageViewBuilder()
+    static let shared = ImageViewFactory()
     
     /// Prevents external initializing.
     private init() {}
     
     /// Module bundle for loading resources.
-    private let bundle = Bundle(for: ImageViewBuilder.self)
+    private let bundle = Bundle(for: ImageViewFactory.self)
     
     /// Creates a UIImageView with an image by name.
     /// - Parameter name: Image name in project resources

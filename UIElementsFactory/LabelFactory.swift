@@ -8,10 +8,10 @@
 import UIKit
 
 /// Creates UILabel.
-class LabelBuilder: LableBuilding {
+class LabelFactory: LableCreating {
     
     /// Singleton reference.
-    static let shared = LabelBuilder()
+    static let shared = LabelFactory()
     
     /// Prevents external initializing.
     private init() {}

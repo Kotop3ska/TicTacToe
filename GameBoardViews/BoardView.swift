@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import UIElementsBuilders
+import UIElementsFactory
 import AppResources
 
 // MARK: - BoardView
@@ -32,7 +32,7 @@ public class BoardView: UIView {
     private let cornerRadius: CGFloat = 15
     
     /// Provides access to UI component builders.
-    private let elementsBuilder = UIBuilder.shared
+    private let elementsBuilder = UIFactory.shared
 
     // MARK: - Init
     

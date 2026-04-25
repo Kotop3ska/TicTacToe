@@ -8,10 +8,10 @@
 import UIKit
 
 /// Creates UIScrollView.
-class ScrollViewBuilder: ScrollViewBuilding {
+class ScrollViewFactory: ScrollViewCreating {
     
     /// Singleton reference.
-    static let shared = ScrollViewBuilder()
+    static let shared = ScrollViewFactory()
     
     /// Prevents external initializing.
     private init() {}

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import UIElementsBuilders
+import UIElementsFactory
 import AppResources
 import GameModels
 import GameViewModels
@@ -40,8 +40,8 @@ final class EnterOneNameViewController: UIViewController, UITextFieldDelegate {
                                                                  backgroundColor: .playerOColor,
                                                                  selectedTextColor: .white,
                                                                  normalTextColor: .white)
-    /// Provides access to UI component builders.
-    private let elementsBuilder = UIBuilder.shared
+    /// Provides access to UI component factory.
+    private let elementsFactory = UIFactory.shared
     
     // MARK: - Life cycle
     
@@ -111,7 +111,7 @@ final class EnterOneNameViewController: UIViewController, UITextFieldDelegate {
     /// - Parameter spacer: Spacer for indentation
     /// - Returns: The configured UIStackView
     private func createStackView(with spacer: UIView) -> UIStackView {
-        let stackView = self.elementsBuilder.stackBuilder.createVerticalStackView(with: 50,
+        let stackView = self.elementsFactory.stackBuilder.createVerticalStackView(with: 50,
                                                                                   distribution: .fill,
                                                                                   alignment: .center)
         stackView.addArrangedSubview(self.playerLabel)
@@ -307,11 +307,11 @@ final class EnterOneNameViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Create elements
     
     private func createLabels(text: String, color: UIColor) -> UILabel {
-        return self.elementsBuilder.labelBuilder.createLabel(text: text, color: color, fontSize: 24)
+        return self.elementsFactory.labelBuilder.createLabel(text: text, color: color, fontSize: 24)
     }
     
     private func createTextFields(placeholder: String) -> UITextField {
-        return self.elementsBuilder.textFieldBuilder.createTextField(placeholder: placeholder,
+        return self.elementsFactory.textFieldBuilder.createTextField(placeholder: placeholder,
                                                                      borderColor: .gray,
                                                                      borderWidth: 0.5,
                                                                      cornerRadius: 15,
@@ -321,14 +321,14 @@ final class EnterOneNameViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func createPlayButton(iconName: String, color: UIColor) -> UIButton {
-        return self.elementsBuilder.buttonBuilder.createButton(withIcon: iconName,
+        return self.elementsFactory.buttonBuilder.createButton(withIcon: iconName,
                                                                color: color,
                                                                cornerRadius: 15,
                                                                fontSize: 24)
     }
     
     private func createScrollView() -> UIScrollView {
-        return self.elementsBuilder.scrollViewBuilder.createScrollView()
+        return self.elementsFactory.scrollViewBuilder.createScrollView()
     }
     
     private func createSegmentedControl(items: [String],
@@ -336,7 +336,7 @@ final class EnterOneNameViewController: UIViewController, UITextFieldDelegate {
                                         selectedTextColor: UIColor,
                                         normalTextColor: UIColor) -> UISegmentedControl {
         
-        return self.elementsBuilder.segmentedControlBuilder
+        return self.elementsFactory.segmentedControlBuilder
             .createSegmentedControl(items: items,
                                     selectedIndex: 0,
                                     selectedTintColor: .playerXColor,

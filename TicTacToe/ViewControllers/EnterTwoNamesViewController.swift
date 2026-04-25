@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import UIElementsBuilders
+import UIElementsFactory
 import AppResources
 import GameViewModels
 
@@ -33,8 +33,8 @@ final class EnterTwoNamesViewController: UIViewController, UITextFieldDelegate {
     /// ScrollView to handle keyboard appearance.
     private lazy var scrollView = createScrollView()
     
-    /// Provides access to UI component builders.
-    private let elementsBuilder = UIBuilder.shared
+    /// Provides access to UI component factory.
+    private let elementsFactory = UIFactory.shared
   
     // MARK: - Life cycle
     
@@ -104,7 +104,7 @@ final class EnterTwoNamesViewController: UIViewController, UITextFieldDelegate {
     /// - Returns: Configured UIStackView
     private func createStackView() -> UIStackView {
         let spacer = self.createSpacerView()
-        let stackView = self.elementsBuilder.stackBuilder.createVerticalStackView(with: 30,
+        let stackView = self.elementsFactory.stackBuilder.createVerticalStackView(with: 30,
                                                                                   distribution: .fill,
                                                                                   alignment: .center)
         stackView.addArrangedSubview(self.playerXLabel)
@@ -275,25 +275,25 @@ final class EnterTwoNamesViewController: UIViewController, UITextFieldDelegate {
     ///   - color: Text color
     /// - Returns: Configured UILabel
     private func createLabel(text: String, color: UIColor) -> UILabel {
-        return self.elementsBuilder.labelBuilder.createLabel(text: text, color: color, fontSize: 24)
+        return self.elementsFactory.labelBuilder.createLabel(text: text, color: color, fontSize: 24)
     }
     
     /// Creates a UITextField via the builder.
     /// - Parameter placeholder: Placeholder text
     /// - Returns: Configured UITextField
     private func createTextFields(placeholder: String) -> UITextField {
-        return self.elementsBuilder.textFieldBuilder.createTextField(placeholder: placeholder, borderColor: .gray, borderWidth: 0.5, cornerRadius: 15, backgroundColor: .white, textColor: .black)
+        return self.elementsFactory.textFieldBuilder.createTextField(placeholder: placeholder, borderColor: .gray, borderWidth: 0.5, cornerRadius: 15, backgroundColor: .white, textColor: .black)
     }
     
     /// Creates a UIButton with a play icon via the builder.
     /// - Returns: Configured UIButton with play.fill icon
     private func createPlayButton() -> UIButton {
-       return self.elementsBuilder.buttonBuilder.createButton(withIcon: "play.fill", color: .playerXColor, cornerRadius: 15, fontSize: 24)
+       return self.elementsFactory.buttonBuilder.createButton(withIcon: "play.fill", color: .playerXColor, cornerRadius: 15, fontSize: 24)
     }
     
     /// Creates a UIScrollView via the builder.
     /// - Returns: Configured UIScrollView
     private func createScrollView() -> UIScrollView {
-        return self.elementsBuilder.scrollViewBuilder.createScrollView()
+        return self.elementsFactory.scrollViewBuilder.createScrollView()
     }
 }

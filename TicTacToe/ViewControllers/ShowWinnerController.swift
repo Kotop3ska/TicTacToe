@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import UIElementsBuilders
+import UIElementsFactory
 import AppResources
 import GameModels
 import GameViewModels
@@ -34,8 +34,8 @@ class ShowWinnerViewController: UIViewController {
     /// The winner cup image.
     private lazy var cupImageView = createImageView(name: "WinnerCup")
     
-    /// Provides access to UI component builders.
-    private let elementsBuilder = UIBuilder.shared
+    /// Provides access to UI component factory.
+    private let elementsFactory = UIFactory.shared
     
     // MARK: - Init
     
@@ -103,7 +103,7 @@ class ShowWinnerViewController: UIViewController {
     /// Creates a vertical stack view with cup, label, and action buttons.
     /// - Returns: Configured UIStackView with centered alignment
     private func createStackView() -> UIStackView {
-        let stackView = self.elementsBuilder.stackBuilder.createVerticalStackView(with: 30,
+        let stackView = self.elementsFactory.stackBuilder.createVerticalStackView(with: 30,
                                                                                   distribution: .fill,
                                                                                   alignment: .center)
         stackView.addArrangedSubview(self.cupImageView)
@@ -174,7 +174,7 @@ class ShowWinnerViewController: UIViewController {
     ///   - color: Background color for the button
     /// - Returns: Configured UIButton instance
     private func createButton(iconName: String, color: UIColor) -> UIButton {
-        return self.elementsBuilder.buttonBuilder.createButton(withIcon: iconName, color: color, cornerRadius: 15, fontSize: 24)
+        return self.elementsFactory.buttonBuilder.createButton(withIcon: iconName, color: color, cornerRadius: 15, fontSize: 24)
     }
     
     /// Creates a UILabel displaying the winner name or draw message.
@@ -183,19 +183,19 @@ class ShowWinnerViewController: UIViewController {
         guard let winner = self.winner else {
             let text = String.localized("draw_label")
             let textColor = UIColor.black
-            return self.elementsBuilder.labelBuilder.createLabel(text: text, color: textColor, fontSize: 40)
+            return self.elementsFactory.labelBuilder.createLabel(text: text, color: textColor, fontSize: 40)
         }
         let text = "\(String.localized("winner_label")) \(winner.name)!"
         let textColor = winner.type == .x ? UIColor.playerXColor : UIColor.playerOColor
 
-        return self.elementsBuilder.labelBuilder.createLabel(text: text, color: textColor, fontSize: 40)
+        return self.elementsFactory.labelBuilder.createLabel(text: text, color: textColor, fontSize: 40)
     }
 
     /// Creates a UIImageView with the specified image name.
     /// - Parameter name: Image name in asset catalog
     /// - Returns: Configured UIImageView instance
     private func createImageView(name: String) -> UIImageView {
-        return self.elementsBuilder.imageViewBuilder.createImageView(name: name)
+        return self.elementsFactory.imageViewBuilder.createImageView(name: name)
     }
     
     // MARK: - Animations

@@ -8,10 +8,10 @@
 import UIKit
 
 /// Creates and configures a UIStackView with the given parameters.
-class StackViewBuilder: StackViewBuilding {
+class StackViewFactory: StackViewCreating {
     
     /// Singleton reference.
-    static let shared = StackViewBuilder()
+    static let shared = StackViewFactory()
     
     /// Prevents external initializing.
     private init() {}

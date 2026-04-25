@@ -8,13 +8,13 @@
 import UIKit
 
 /// Creates UIButton with attributed content.
-class ButtonBuilder: ButtonBuilding {
+class ButtonFactory: ButtonCreating {
     
     /// Singleton reference.
-    public static let shared = ButtonBuilder()
+    public static let shared = ButtonFactory()
     
     /// delegates the creation of attributed content.
-    private let contentBuilder = AttributedContentBuilder.shared
+    private let contentBuilder = AttributedContentFactory.shared
     
     /// Prevents external initializing.
     private init() {}

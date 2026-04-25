@@ -8,10 +8,10 @@
 import UIKit
 
 /// Creates UIPickerView.
-class PickerViewBuilder: PickerViewBuilding {
+class PickerViewFactory: PickerViewCreating {
     
     /// Singleton reference.
-    static let shared = PickerViewBuilder()
+    static let shared = PickerViewFactory()
     
     /// Prevents external initializing.
     private init() {}

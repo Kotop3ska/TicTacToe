@@ -8,10 +8,10 @@
 import UIKit
 
 /// Creates and configures a UISwitch.
-class SwitchBuilder: SwitchBuilding {
+class SwitchFactory: SwitchCreating {
     
     /// Singleton reference.
-    static let shared = SwitchBuilder()
+    static let shared = SwitchFactory()
     
     /// Prevents external initializing.
     private init() {}

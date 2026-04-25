@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import UIElementsBuilders
+import UIElementsFactory
 import AppResources
 
 /// Displays the app launch screen with logo animation before transitioning to the main menu.
@@ -17,8 +17,8 @@ class SplashViewController: UIViewController {
     /// The logo image.
     private lazy var logoImageView = createImageView(name: "LoadLogo")
     
-    /// Provides access to UI component builders.
-    private let elementsBuilder = UIBuilder.shared
+    /// Provides access to UI component factory.
+    private let elementsFactory = UIFactory.shared
     
     // MARK: - Life cycle
     
@@ -83,6 +83,6 @@ class SplashViewController: UIViewController {
     /// - Parameter name: Image name in asset catalog
     /// - Returns: Configured UIImageView instance
     private func createImageView(name: String) -> UIImageView {
-        return self.elementsBuilder.imageViewBuilder.createImageView(name: name)
+        return self.elementsFactory.imageViewBuilder.createImageView(name: name)
     }
 }

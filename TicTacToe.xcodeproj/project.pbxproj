@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0AAA21DD2F7EB59000110FA2 /* UIElementsBuilders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAA21D52F7EB59000110FA2 /* UIElementsBuilders.framework */; };
-		0AAA21DE2F7EB59000110FA2 /* UIElementsBuilders.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAA21D52F7EB59000110FA2 /* UIElementsBuilders.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0AAA220B2F7FB01300110FA2 /* GameBoardViews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAA22032F7FB01300110FA2 /* GameBoardViews.framework */; };
 		0AAA220C2F7FB01300110FA2 /* GameBoardViews.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAA22032F7FB01300110FA2 /* GameBoardViews.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0AAA22242F7FD2BC00110FA2 /* AppResources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAA221C2F7FD2BC00110FA2 /* AppResources.framework */; };
@@ -21,16 +19,11 @@
 		0AEDAE9E2F8161510065A237 /* GameViewModels.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEDAE952F8161510065A237 /* GameViewModels.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0AEDAEAC2F8162480065A237 /* GameModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEDAE832F8161450065A237 /* GameModels.framework */; };
 		0AEDAEAD2F8162480065A237 /* GameModels.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEDAE832F8161450065A237 /* GameModels.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0AEE10732F9D5FB000632E4F /* UIElementsFactory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAA21D52F7EB59000110FA2 /* UIElementsFactory.framework */; };
+		0AEE10742F9D5FB000632E4F /* UIElementsFactory.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAA21D52F7EB59000110FA2 /* UIElementsFactory.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0AAA21DB2F7EB59000110FA2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0A7317562EB8C2440017C903 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0AAA21D42F7EB59000110FA2;
-			remoteInfo = UIElementsBuilders;
-		};
 		0AAA22092F7FB01300110FA2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0A7317562EB8C2440017C903 /* Project object */;
@@ -73,6 +66,13 @@
 			remoteGlobalIDString = 0AEDAE822F8161450065A237;
 			remoteInfo = GameModels;
 		};
+		0AEE10752F9D5FB000632E4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A7317562EB8C2440017C903 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AAA21D42F7EB59000110FA2;
+			remoteInfo = UIElementsFactory;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -97,7 +97,7 @@
 				0AAA220C2F7FB01300110FA2 /* GameBoardViews.framework in Embed Frameworks */,
 				0AEDAE9E2F8161510065A237 /* GameViewModels.framework in Embed Frameworks */,
 				0AEDAE8C2F8161450065A237 /* GameModels.framework in Embed Frameworks */,
-				0AAA21DE2F7EB59000110FA2 /* UIElementsBuilders.framework in Embed Frameworks */,
+				0AEE10742F9D5FB000632E4F /* UIElementsFactory.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,7 +117,7 @@
 
 /* Begin PBXFileReference section */
 		0A73175E2EB8C2440017C903 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AAA21D52F7EB59000110FA2 /* UIElementsBuilders.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIElementsBuilders.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AAA21D52F7EB59000110FA2 /* UIElementsFactory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIElementsFactory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AAA22032F7FB01300110FA2 /* GameBoardViews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GameBoardViews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AAA221C2F7FD2BC00110FA2 /* AppResources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppResources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AEDAE832F8161450065A237 /* GameModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GameModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,12 +132,12 @@
 			);
 			target = 0A73175D2EB8C2440017C903 /* TicTacToe */;
 		};
-		0AAA22482F7FDF9E00110FA2 /* Exceptions for "AppResources" folder in "UIElementsBuilders" target */ = {
+		0AAA22482F7FDF9E00110FA2 /* Exceptions for "AppResources" folder in "UIElementsFactory" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Assets.xcassets,
 			);
-			target = 0AAA21D42F7EB59000110FA2 /* UIElementsBuilders */;
+			target = 0AAA21D42F7EB59000110FA2 /* UIElementsFactory */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -150,9 +150,9 @@
 			path = TicTacToe;
 			sourceTree = "<group>";
 		};
-		0AAA21D62F7EB59000110FA2 /* UIElementsBuilders */ = {
+		0AAA21D62F7EB59000110FA2 /* UIElementsFactory */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = UIElementsBuilders;
+			path = UIElementsFactory;
 			sourceTree = "<group>";
 		};
 		0AAA22042F7FB01300110FA2 /* GameBoardViews */ = {
@@ -163,7 +163,7 @@
 		0AAA221D2F7FD2BC00110FA2 /* AppResources */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				0AAA22482F7FDF9E00110FA2 /* Exceptions for "AppResources" folder in "UIElementsBuilders" target */,
+				0AAA22482F7FDF9E00110FA2 /* Exceptions for "AppResources" folder in "UIElementsFactory" target */,
 			);
 			explicitFolders = (
 				SoundResources,
@@ -189,10 +189,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AEDAE9D2F8161510065A237 /* GameViewModels.framework in Frameworks */,
-				0AAA21DD2F7EB59000110FA2 /* UIElementsBuilders.framework in Frameworks */,
 				0AAA22242F7FD2BC00110FA2 /* AppResources.framework in Frameworks */,
 				0AEDAE8B2F8161450065A237 /* GameModels.framework in Frameworks */,
 				0AAA220B2F7FB01300110FA2 /* GameBoardViews.framework in Frameworks */,
+				0AEE10732F9D5FB000632E4F /* UIElementsFactory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				0A7317602EB8C2440017C903 /* TicTacToe */,
-				0AAA21D62F7EB59000110FA2 /* UIElementsBuilders */,
+				0AAA21D62F7EB59000110FA2 /* UIElementsFactory */,
 				0AAA22042F7FB01300110FA2 /* GameBoardViews */,
 				0AAA221D2F7FD2BC00110FA2 /* AppResources */,
 				0AEDAE842F8161450065A237 /* GameModels */,
@@ -254,7 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				0A73175E2EB8C2440017C903 /* TicTacToe.app */,
-				0AAA21D52F7EB59000110FA2 /* UIElementsBuilders.framework */,
+				0AAA21D52F7EB59000110FA2 /* UIElementsFactory.framework */,
 				0AAA22032F7FB01300110FA2 /* GameBoardViews.framework */,
 				0AAA221C2F7FD2BC00110FA2 /* AppResources.framework */,
 				0AEDAE832F8161450065A237 /* GameModels.framework */,
@@ -323,11 +323,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				0AAA21DC2F7EB59000110FA2 /* PBXTargetDependency */,
 				0AAA220A2F7FB01300110FA2 /* PBXTargetDependency */,
 				0AAA22232F7FD2BC00110FA2 /* PBXTargetDependency */,
 				0AEDAE8A2F8161450065A237 /* PBXTargetDependency */,
 				0AEDAE9C2F8161510065A237 /* PBXTargetDependency */,
+				0AEE10762F9D5FB000632E4F /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				0A7317602EB8C2440017C903 /* TicTacToe */,
@@ -339,9 +339,9 @@
 			productReference = 0A73175E2EB8C2440017C903 /* TicTacToe.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0AAA21D42F7EB59000110FA2 /* UIElementsBuilders */ = {
+		0AAA21D42F7EB59000110FA2 /* UIElementsFactory */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AAA21DF2F7EB59000110FA2 /* Build configuration list for PBXNativeTarget "UIElementsBuilders" */;
+			buildConfigurationList = 0AAA21DF2F7EB59000110FA2 /* Build configuration list for PBXNativeTarget "UIElementsFactory" */;
 			buildPhases = (
 				0AAA21D02F7EB59000110FA2 /* Headers */,
 				0AAA21D12F7EB59000110FA2 /* Sources */,
@@ -353,13 +353,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				0AAA21D62F7EB59000110FA2 /* UIElementsBuilders */,
+				0AAA21D62F7EB59000110FA2 /* UIElementsFactory */,
 			);
-			name = UIElementsBuilders;
+			name = UIElementsFactory;
 			packageProductDependencies = (
 			);
 			productName = UIElementsBuilders;
-			productReference = 0AAA21D52F7EB59000110FA2 /* UIElementsBuilders.framework */;
+			productReference = 0AAA21D52F7EB59000110FA2 /* UIElementsFactory.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		0AAA22022F7FB01300110FA2 /* GameBoardViews */ = {
@@ -504,7 +504,7 @@
 			projectRoot = "";
 			targets = (
 				0A73175D2EB8C2440017C903 /* TicTacToe */,
-				0AAA21D42F7EB59000110FA2 /* UIElementsBuilders */,
+				0AAA21D42F7EB59000110FA2 /* UIElementsFactory */,
 				0AAA22022F7FB01300110FA2 /* GameBoardViews */,
 				0AAA221B2F7FD2BC00110FA2 /* AppResources */,
 				0AEDAE822F8161450065A237 /* GameModels */,
@@ -604,11 +604,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0AAA21DC2F7EB59000110FA2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0AAA21D42F7EB59000110FA2 /* UIElementsBuilders */;
-			targetProxy = 0AAA21DB2F7EB59000110FA2 /* PBXContainerItemProxy */;
-		};
 		0AAA220A2F7FB01300110FA2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0AAA22022F7FB01300110FA2 /* GameBoardViews */;
@@ -638,6 +633,11 @@
 			isa = PBXTargetDependency;
 			target = 0AEDAE822F8161450065A237 /* GameModels */;
 			targetProxy = 0AEDAEAE2F8162480065A237 /* PBXContainerItemProxy */;
+		};
+		0AEE10762F9D5FB000632E4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AAA21D42F7EB59000110FA2 /* UIElementsFactory */;
+			targetProxy = 0AEE10752F9D5FB000632E4F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1209,7 +1209,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0AAA21DF2F7EB59000110FA2 /* Build configuration list for PBXNativeTarget "UIElementsBuilders" */ = {
+		0AAA21DF2F7EB59000110FA2 /* Build configuration list for PBXNativeTarget "UIElementsFactory" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0AAA21E02F7EB59000110FA2 /* Debug */,
