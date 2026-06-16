@@ -1,6 +1,34 @@
-# Infinity XO
+# Infinity XO (Rus)
 
-A unique take on classic tic-tac-toe with endless gameplay.
+>Уникальная версия классических крестиков-ноликов с бесконечным игровым процессом.  
+Старые ходы автоматически удаляются, поэтому ничья невозможна.
+
+---
+
+## Идея
+
+В классических крестиках-ноликах поле быстро заполняется и игра заканчивается ничьей.
+
+В этой реализации добавлен механизм **удаления старых ходов**:
+
+- когда поле достигает определённого уровня заполнения, самые ранние ходы автоматически удаляются  
+- поле освобождается для новых ходов  
+- игра продолжается бесконечно  
+
+Это делает геймплей более динамичным и полностью меняет стратегию игры.
+
+---
+
+## Режимы игры
+
+- 👥 Игрок против игрока (на одном устройстве)
+- 🤖 Игрок против бота
+
+---
+
+# Infinity XO (En)
+
+>A unique take on classic tic-tac-toe with endless gameplay.
 Old moves are automatically cleared, making a draw impossible.
 
 ---
@@ -26,7 +54,7 @@ This makes the gameplay dynamic and changes the game strategy.
 
 ---
 
-## Screenshots
+## Скриншоты / Screenshots
 
 <div align="center">
   <img src="Screenshots/screens1.png" width="650">
